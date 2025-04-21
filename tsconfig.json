@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "baseUrl": ".", // Important
+    "paths": {
+       "@/*": ["./*"] // Or "./src/*" if you have an src directory
+     },
     "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -22,6 +26,17 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/Sidebar.tsx"],
   "exclude": ["node_modules"]
 }
+// tsconfig.json
+// {
+//   "compilerOptions": {
+//     // ... other options
+//     "baseUrl": ".", // Important
+//     "paths": {
+//       "@/*": ["./*"] // Or "./src/*" if you have an src directory
+//     }
+//   },
+//   // ... include/exclude options
+// }
